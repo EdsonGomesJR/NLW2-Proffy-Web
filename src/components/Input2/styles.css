@@ -1,0 +1,43 @@
+
+
+
+.input-block {
+  display: flex;
+  align-items: center;
+  width: 40rem;
+  height: 8rem;
+  font-family: Poppins;
+  font-size: 1.8rem;
+  line-height: 24px;
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px 8px 0px 0px;
+  outline: 0;
+
+}
+
+ .input-block input {
+    background: transparent;
+    border: 0;
+    flex: 1;
+ }
+  .input-block input::placeholder {
+      color: #9C98A6;
+    }
+
+  
+ .input-block svg {
+  color: #9C98A6;
+  margin-right: 20px;
+  }
+
+  .input-block:focus-within ::after {
+    width: calc(100% - 3.2rem);
+    height: 32px;
+    content: '';
+    background: var(--color-primary-light);
+    position: absolute;
+  
+
+  }
+

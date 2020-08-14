@@ -1,0 +1,248 @@
+#page-login-proffy{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.logo-img img { 
+  width: 100%;
+  height: 35rem;
+  background-color: var(--color-primary);
+
+}
+.page-login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.page-login-form legend {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #32264D;
+}
+
+.input-form {
+display: flex;
+align-items: center;
+flex-direction: column;
+margin-top: 1.2rem;
+
+
+}
+.input-form input {
+  width: 40rem;
+  height: 7.5rem;
+  padding: 1rem;
+  font-family: Poppins;
+  font-size: 1.8rem;
+  line-height: 24px;
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  box-sizing: border-box;
+  border-radius: 8px 8px 0px 0px;
+ 
+}
+.input-form input + input{
+  border-radius: 0px 0px 8px 8px;
+} 
+
+   .input-form input::placeholder{
+    color: #9C98A6;
+    padding-left: 0.5rem;
+  
+  }  
+
+.page-login-form img {
+  position: relative;
+  left: 16rem;
+  bottom: 4.5rem;
+  cursor: pointer;
+
+}
+
+ .remember-me{
+  width: 40rem;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  margin-top: -1.5rem;
+ 
+}
+.page-login-form .checkbox {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+  border-radius: 8px;
+  background-color: white;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  outline: none;
+  cursor: pointer;
+  
+}
+.page-login-form .checkmark::after{
+  content: "";
+  position: relative;
+  display: none;
+
+}
+
+.page-login-form .checkbox:checked{
+  background-color: var(--color-secundary);
+ 
+}
+.page-login-form .checkbox:checked ~ .checkmark::after{
+
+  display: block;
+ 
+}
+.page-login-form .checkmark::after{
+  left: 8px;
+  bottom: 19px;
+  width: 5px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.page-login-form .label-container {
+  font-size: 14px;
+  line-height: 24px;
+  color: #9C98A6;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+}
+
+.page-login-form .remember-me a{
+
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #9C98A6;
+  
+}
+
+.page-login-form button{
+
+  width: 40rem;
+  height: 5.5rem;
+  margin-top: 3.5rem;
+  background-color: #DCDCE6;
+  color: #9C98A6;
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 8px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.page-login-form img:first-child{
+  left: 0;
+  top: 0;
+  margin-left: 0.4rem;
+}
+.page-login-footer {
+  width: 40rem;
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.page-login-footer a {
+
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media(min-width: 700px){
+  #page-login-proffy {
+    max-width: 100vw;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: 
+    "logo form "
+    ;
+
+  }
+
+
+  .logo-img {
+    grid-area: logo;
+    margin:0; 
+    height: 100vh; 
+    
+    
+  }
+
+  .logo-img img {
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .page-login-form{
+    grid-area: form;
+
+    padding-left: 1rem;
+    padding-right: 2rem;
+    width: 100%;
+    height: 100vh;
+  
+
+  }
+
+  .page-login-form legend {
+    font-size: 36px;
+    text-align: start;
+    margin-top: 150px;
+  
+  }
+
+  .input-form{
+    margin-top: 40px ;
+  }
+
+  .page-login-form .remember-me{
+    margin-top: 8px;
+  }
+  .page-login-form .label-container{
+    font-size: 16px;
+  }
+
+  .page-login-form .remember-me a{
+    font-size: 16px;
+  }
+
+  .page-login-form button{
+    margin-top: 80px;
+    font-size: 18px;
+  }
+  .page-login-footer{
+    margin-top: 108px;
+    
+  }
+
+}
