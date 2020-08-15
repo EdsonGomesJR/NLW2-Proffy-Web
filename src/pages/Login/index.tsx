@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import loginTheme from '../../assets/images/loginTheme.svg'; 
 import eyeIcon from '../../assets/images/icons/eye.svg';
 import './styles.css';
 import purpleHeart from '../../assets/images/icons/purple-heart.svg';
-const Login: React.FC = () => {
+import { IconBaseProps } from 'react-icons';
+import LoginInput from '../../components/LoginInput';
+import { FiMail, FiEye } from 'react-icons/fi';
+
+
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  name: string;
+  label: string;
+  icon?: React.ComponentType<IconBaseProps>;
+
+}
+
+const Login: React.FC<InputProps> = ({icon:Icon, ...rest}) => {
   return (
   
 
@@ -17,9 +29,11 @@ const Login: React.FC = () => {
           <main>
             <legend>Fazer Login</legend>
             <div className="input-form">
-              <input type="text" placeholder="E-mail"/>
-              <input type="password" placeholder="Senha"/>  
-              <img src={eyeIcon}  alt="password"/>
+            
+              <LoginInput type="text" placeholder="E-mail" name="login-input" />
+              <LoginInput type="password"placeholder="Senha" name="login-input"  icon={FiEye} />
+              
+            
             </div>
             <div className="remember-me">
               <label className="label-container">

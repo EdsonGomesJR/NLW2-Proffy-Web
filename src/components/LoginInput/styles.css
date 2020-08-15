@@ -4,16 +4,25 @@
 .input-block {
   display: flex;
   align-items: center;
-  width: 40rem;
+  width: 45rem;
   height: 8rem;
   font-family: Poppins;
   font-size: 1.8rem;
   line-height: 24px;
   background: #FAFAFC;
   border: 1px solid #E6E6F0;
-  border-radius: 8px 8px 0px 0px;
   outline: 0;
 
+}
+.input-block + .input-block{
+  margin-top: 0;
+}
+.input-block:first-child{
+  border-radius: 8px 8px 0px 0px;
+}
+
+.input-block:last-child{
+  border-radius: 0px 0px 8px 8px;
 }
 
  .input-block input {
@@ -28,16 +37,18 @@
   
  .input-block svg {
   color: #9C98A6;
-  margin-right: 20px;
+  margin-right: 24px;
   }
 
-  .input-block:focus-within ::after {
-    width: calc(100% - 3.2rem);
-    height: 32px;
+  .input-block:focus-within::after {
+    height: calc(100% - 2rem);
+    width: 3px;
     content: '';
     background: var(--color-primary-light);
     position: absolute;
+    left: -2px;
   
-
   }
+
+
 

@@ -16,7 +16,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   icon?: React.ComponentType<IconBaseProps>;
 }
 
-const InputV: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
+const LoginInput: React.FC<InputProps> = ({ name, icon: Icon,...rest }) => {
 
   
   return (
@@ -26,7 +26,7 @@ const InputV: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
         // Tem que criar uma arrow func se não executa direto!
         {...rest}
       />
-      {Icon && <Icon size={25} />}
+      {Icon && <Icon size={24} />}
 
     </div>
 
@@ -35,4 +35,4 @@ const InputV: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
   );
 };
 
-export default InputV;
+export default LoginInput;
