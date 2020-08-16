@@ -4,6 +4,7 @@ import Landing from './pages/Landing';
 import TeacherList from './pages/TeacherList';
 import TeacherForm from './pages/TeacherForm';
 import Login from './pages/Login';
+import LoginInput from './components/LoginInput';
 
 function Routes() {
 
