@@ -8,7 +8,7 @@ import LoginInput from '../../components/LoginInput';
 import { FiMail, FiEye } from 'react-icons/fi';
 import TesteInput from '../../components/TesteInput';
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-
+import backIcon from '../../assets/images/icons/back.svg';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
@@ -19,7 +19,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 }
 
-const Login: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
+const SignUp: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
     const [email, setEmail] = useState('');
 
   return (
@@ -27,16 +27,27 @@ const Login: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
 
     <div id="page-login-proffy" className="container">
       <div className="logo-img">
-       <img  src={loginTheme} alt="Login"/>
+        
+       <img   src={loginTheme} alt="Login"/>
       </div>
 
       <div className="page-login-form">
+      
+       
         <form>
           <main>
-            <legend>Fazer Login</legend>
+          <div className="header">
+        <img src={backIcon} alt="goback"/>
+        </div>
+            <legend>Cadastro</legend>
+            <p>Preencha os dados abaixo
+              {<br/>}
+               para começar.</p>
             <div className="input-form">
+          
 
-             {/* <TesteInput />  */}
+            <LoginInput name="Name" placeholder="Nome"/>
+            <LoginInput name="LastName" placeholder="Sobrenome"/>
              <LoginInput  
              type="e-mail" 
              name="E-mail" 
@@ -49,32 +60,16 @@ const Login: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
         /> 
                 
             </div>
-            <div className="remember-me">
-              <label className="label-container">
-                <input type="checkbox"className="checkbox"/>
-                <span className="checkmark">  Lembrar-me </span>
-        
-              </label>
-             <a href="/">Esqueci minha senha</a>
-            </div>
-            <button disabled={email.endsWith('.com')  ? false : true } type="submit">Entrar</button>
+          
+            <button  type="submit">Concluir cadastro</button>
           </main>
           
         </form>
-        
-      <footer className="page-login-footer">
-          <p>Não tem conta? {<br/>}
-          <a href="/">Cadastre-se</a>
-          </p>
-          
-          <p>É de graça!
-            <img src={purpleHeart} alt="purple-heart"/>
-          </p>
-        </footer> 
-      </div>
+   
+        </div>
     </div>
  
   );
 }
 
-export default Login;
+export default SignUp;

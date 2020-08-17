@@ -9,6 +9,7 @@ import { IconBaseProps } from 'react-icons';
 import { FiEyeOff, FiMail } from 'react-icons/fi';
 import { useField } from '@unform/core';
 import  './styles.css';
+import {Container} from './styles';
 
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -18,14 +19,12 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const LoginInput: React.FC<InputProps> = ({ name,icon:Icon,...rest }) => {
-
   const [passwordShown, setPasswordShown] = useState(false);
 
-   if(passwordShown){
-      Icon=FiEyeOff;
+  if(passwordShown){
+     Icon=FiEyeOff;
 
-    }
-
+   }
 
   const togglePasswordVisiblity = () => {
   
@@ -34,9 +33,11 @@ const LoginInput: React.FC<InputProps> = ({ name,icon:Icon,...rest }) => {
   };
 
   return (
-    <div className="input-block">
-        <input
-       type={passwordShown ? "text" : "password"}
+    //  <div className="input-block">
+       
+<Container>
+    <input
+          type={passwordShown ? "text" : "password"}
       
         // Tem que criar uma arrow func se não executa direto!
         {...rest}
@@ -46,8 +47,8 @@ const LoginInput: React.FC<InputProps> = ({ name,icon:Icon,...rest }) => {
   { passwordShown ? Icon &&  <Icon  size={24} color={'#8257E5'} onClick={togglePasswordVisiblity}/>
     : Icon && <Icon  size={24}  onClick={togglePasswordVisiblity}/>
   }
-
-    </div>
+</Container>
+    //  </div>
 
 
  
