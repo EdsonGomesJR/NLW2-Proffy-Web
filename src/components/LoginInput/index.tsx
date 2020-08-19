@@ -8,17 +8,19 @@ import React, {
 import { IconBaseProps } from 'react-icons';
 import { FiEyeOff, FiMail } from 'react-icons/fi';
 import { useField } from '@unform/core';
-import  './styles.css';
+// import  './styles.css';
 import {Container} from './styles';
 
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   icon?: React.ComponentType<IconBaseProps>;
+  teste?: boolean;
+
 
 }
 
-const LoginInput: React.FC<InputProps> = ({ name,icon:Icon,...rest }) => {
+const LoginInput: React.FC<InputProps> = ({ name,icon:Icon, teste,...rest }) => {
   const [passwordShown, setPasswordShown] = useState(false);
 
   if(passwordShown){
@@ -35,9 +37,10 @@ const LoginInput: React.FC<InputProps> = ({ name,icon:Icon,...rest }) => {
   return (
     //  <div className="input-block">
        
-<Container>
+<Container  isSecondary={teste ? true : false}>
     <input
-          type={passwordShown ? "text" : "password"}
+        
+          type={passwordShown ? "text" && "e-mail" : "password"}
       
         // Tem que criar uma arrow func se não executa direto!
         {...rest}

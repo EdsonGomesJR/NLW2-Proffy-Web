@@ -1,13 +1,12 @@
 import React, { InputHTMLAttributes, Component, useState } from 'react';
 import loginTheme from '../../assets/images/loginTheme.svg'; 
-import eyeIcon from '../../assets/images/icons/eye.svg';
+
 import './styles.css';
 import purpleHeart from '../../assets/images/icons/purple-heart.svg';
 import { IconBaseProps } from 'react-icons';
 import LoginInput from '../../components/LoginInput';
-import { FiMail, FiEye } from 'react-icons/fi';
-import TesteInput from '../../components/TesteInput';
-import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { FiEye } from 'react-icons/fi';
+
 
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -36,7 +35,6 @@ const Login: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
             <legend>Fazer Login</legend>
             <div className="input-form">
 
-             {/* <TesteInput />  */}
              <LoginInput  
              type="e-mail" 
              name="E-mail" 
@@ -45,9 +43,9 @@ const Login: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
              placeholder="E-mail" />
               <LoginInput 
               
-              placeholder="Senha" name="login-input" icon={FiEye}
+              placeholder="Senha" name="signup-password" icon={FiEye}
         /> 
-                
+           
             </div>
             <div className="remember-me">
               <label className="label-container">

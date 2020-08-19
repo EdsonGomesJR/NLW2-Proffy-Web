@@ -7,7 +7,7 @@
 }
 .logo-img img { 
   width: 100%;
-  height: 35rem;
+  height: 30rem;
   background-color: var(--color-primary);
 
 }
@@ -26,7 +26,7 @@
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 36px;
   color: #32264D;
 }
@@ -35,13 +35,13 @@
 display: flex;
 align-items: center;
 flex-direction: column;
-margin-top: 4.2rem;
+margin-top: 2.2rem;
 
 
 }
 .input-form input {
   width: 40rem;
-  height: 7.5rem;
+  height: 6.5rem;
   padding: 1rem;
   font-family: Poppins;
   font-size: 1.8rem;
@@ -62,13 +62,6 @@ margin-top: 4.2rem;
   
   }  
 
-/* .page-login-form img {
-  position: relative;
-  left: 16rem;
-  bottom: 4.5rem;
-  cursor: pointer;
-
-} */
 
  .remember-me{
   width: 45rem;
@@ -182,7 +175,7 @@ margin-top: 4.2rem;
 }
 .page-login-footer {
   width: 40rem;
-  margin-top: 7.5rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
@@ -240,7 +233,7 @@ margin-top: 4.2rem;
     font-size: 36px;
     line-height: 36px;
     text-align: start;
-    margin-top: 229px;
+    margin-top: 150px;
     font-weight: 600;
     color: #32264D;
 
@@ -248,7 +241,7 @@ margin-top: 4.2rem;
   }
 
   .input-form {
-    margin-top: 40px ;
+    margin-top: 30px ;
   }
 
   .input-block  input{
@@ -257,7 +250,6 @@ margin-top: 4.2rem;
   
   
   }
-
 
 
   .page-login-form .remember-me{
@@ -271,15 +263,12 @@ margin-top: 4.2rem;
     font-size: 16px;
   }
 
-  .page-login-form button{
-    height:  8rem;
-    margin-top: 88px;
-    font-size: 18px;
-  }
+  
   .page-login-footer{
     font-size: 16px;
     line-height: 26px;
-    margin-top: 128px;
+    margin-top: 100px;
+    margin-bottom: 20px;
   
     
   }

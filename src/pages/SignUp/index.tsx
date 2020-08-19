@@ -9,6 +9,7 @@ import { FiMail, FiEye } from 'react-icons/fi';
 import TesteInput from '../../components/TesteInput';
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import backIcon from '../../assets/images/icons/back.svg';
+import { Link } from 'react-router-dom';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
@@ -25,19 +26,21 @@ const SignUp: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
   return (
   
 
-    <div id="page-login-proffy" className="container">
+    <div id="page-signup-proffy" className="container">
       <div className="logo-img">
-        
-       <img   src={loginTheme} alt="Login"/>
+       <img   src={loginTheme} alt="Signup"/>
       </div>
 
-      <div className="page-login-form">
+      <div className="page-signup-form">
       
        
         <form>
           <main>
           <div className="header">
-        <img src={backIcon} alt="goback"/>
+            <Link to="/login">
+            <img src={backIcon} alt="goback"/>
+            </Link>
+        
         </div>
             <legend>Cadastro</legend>
             <p>Preencha os dados abaixo
@@ -46,8 +49,8 @@ const SignUp: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
             <div className="input-form">
           
 
-            <LoginInput name="Name" placeholder="Nome"/>
-            <LoginInput name="LastName" placeholder="Sobrenome"/>
+            <LoginInput name="Name" placeholder="Nome" type="text"/>
+            <LoginInput name="LastName" placeholder="Sobrenome" type="text"/>
              <LoginInput  
              type="e-mail" 
              name="E-mail" 
@@ -56,7 +59,7 @@ const SignUp: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
              placeholder="E-mail" />
               <LoginInput 
               
-              placeholder="Senha" name="login-input" icon={FiEye}
+              placeholder="Senha" name="signup-input" icon={FiEye}
         /> 
                 
             </div>

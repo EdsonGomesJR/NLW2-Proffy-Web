@@ -1,4 +1,4 @@
-#page-login-proffy{
+#page-signup-proffy{
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -7,11 +7,11 @@
 }
 .logo-img img { 
   width: 100%;
-  height: 35rem;
+  height: 30rem;
   background-color: var(--color-primary);
 
 }
-.page-login-form {
+.page-signup-form {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -20,20 +20,20 @@
 
 
 }
-.page-login-form legend {
+.page-signup-form legend {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
-  line-height: 36px;
+  line-height: 24px;
   color: #32264D;
   margin-bottom: 1.2rem;
 
 }
 
-.page-login-form p{
+.page-signup-form p{
   text-align: center;
 }
 
@@ -41,45 +41,14 @@
 display: flex;
 align-items: center;
 flex-direction: column;
-margin-top: 2.2rem;
+margin-top: 0.4rem;
 
 
 }
-.input-form input {
-  width: 40rem;
-  height: 7.5rem;
-  padding: 1rem;
-  font-family: Poppins;
-  font-size: 1.8rem;
-  line-height: 24px;
-  background: #FAFAFC;
-  border: 1px solid #E6E6F0;
-  box-sizing: border-box;
-  border-radius: 8px 8px 0px 0px;
- 
-}
-.input-form input + input{
-  border-radius: 0px 0px 8px 8px;
-} 
-
-   .input-form input::placeholder{
-    color: #9C98A6;
-    padding-left: 0.5rem;
-  
-  }  
 
 
 
-.page-login-form .remember-me a{
-
-  font-size: 16px;
-  line-height: 24px;
-  text-decoration: none;
-  color: #9C98A6;
-  
-}
-
-.page-login-form button:disabled{
+.page-signup-form button:disabled{
 
   width: 45rem;
   height: 7rem;
@@ -96,11 +65,11 @@ margin-top: 2.2rem;
   cursor: pointer;
 }
 
-.page-login-form button{
+.page-signup-form button{
 
   width: 45rem;
   height: 7rem;
-  margin-top: 5.5rem;
+  margin-top: 3.5rem;
   background-color: var(--color-secundary);
   color: var(--color-button-text);
   font-family: Archivo;
@@ -120,14 +89,13 @@ margin-top: 2.2rem;
 
 
 
-
 @media(min-width: 700px){
-  #page-login-proffy {
+  #page-signup-proffy {
     max-width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-areas: 
-    "form logo "
+    "form logo"
     ;
 
   }
@@ -147,21 +115,22 @@ margin-top: 2.2rem;
     
   }
 
-  .page-login-form{
+  .page-signup-form{
     display: flex;
     grid-area: form;
-    padding-left: 1rem;
+    padding-left: 2rem;
     padding-right: 2rem;
     width: 100%;
     height: 100vh;
     position: relative;
-    bottom: 40px
+    bottom: 30px
+
   
 
   }
 
 
-  .page-login-form legend {
+  .page-signup-form legend {
     font-family: Poppins;
     font-size: 38px;
     line-height: 34px;
@@ -170,7 +139,7 @@ margin-top: 2.2rem;
     color: #32264D;
   
   }
-  .page-login-form p{
+  .page-signup-form p{
 
     margin-top: 20px;
     font-family: Poppins;
@@ -180,47 +149,21 @@ margin-top: 2.2rem;
     text-align: start;
     
   }
-
   .input-form {
     margin-top: 40px ;
   }
 
-  .input-block  input{
-    font-size: 20px;
-    padding:24px;
-  
-  
-  }
-
-
-
-  .page-login-form .remember-me{
-    margin-top: 24px;
-  }
-  .page-login-form .label-container{
-    font-size: 16px;
-  }
-
-  .page-login-form .remember-me a{
-    font-size: 16px;
-  }
-
-  .page-login-form button{
+  .page-signup-form button{
     height:  8rem;
     margin-top: 60px;
     font-size: 18px;
   }
-  .page-login-footer{
-    font-size: 16px;
-    line-height: 26px;
-    margin-top: 128px;
-  
-    
-  }
+
 
   .header{
     position: relative;
-    bottom: 95px;
+    bottom: 25px;
+
   }
 
 
