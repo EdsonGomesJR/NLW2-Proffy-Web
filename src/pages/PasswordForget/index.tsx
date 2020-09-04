@@ -25,7 +25,7 @@ const PasswordForget: React.FC = () => {
       <legend>Eita, esqueceu sua senha?</legend>
       <p>Não esquenta, vamos dar um jeito nisso.</p>
       </main>
-      <LoginInput2 teste={true} type="e-mail" name="e-mail" placeholder="E-mail"/>
+      <LoginInput2 inputFourBorders={true} type="e-mail" name="e-mail" placeholder="E-mail"/>
     
       
        

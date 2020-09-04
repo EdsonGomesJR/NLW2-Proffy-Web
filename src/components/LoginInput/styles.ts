@@ -1,8 +1,8 @@
-import Tooltip from '../Tooltip';
+
 import styled, { css } from 'styled-components';
 
 interface ContainerProps{
-  isSecondary: boolean;
+  isFourBordered: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -18,7 +18,7 @@ border: 1px solid #E6E6F0;
 outline: 0;
 margin-top: 2rem;
 
-${props => props.isSecondary && 
+${props => props.isFourBordered && 
 css`
 border-radius: 8px 8px 8px 8px`};
 

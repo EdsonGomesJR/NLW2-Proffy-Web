@@ -1,12 +1,13 @@
 import React, { useState, FormEvent } from 'react';
-import   './styles.css';
+
+import smileIcon from '../../assets/images/icons/smile.svg';
 
 import TeacherItem, {Teacher} from '../../components/TeacherItem';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 import api from '../../services/api';
-
+import   './styles.css';
 
 function TeacherList ()  {
 
@@ -33,7 +34,13 @@ function TeacherList ()  {
   }
   return (
 <div id="page-teacher-list" className="container">
-  <PageHeader title="Estes são os proffys disponíveis ">
+  <PageHeader 
+  pageTitle="Estudar" 
+  title={"Estes são os \nproffys disponíveis."}
+  image={smileIcon}
+  imageText="Nós temos 3123 professores.  "
+  >
+  
   <form id="search-teachers" onSubmit={searchTeachers}>
   <Select 
       name="subject" 

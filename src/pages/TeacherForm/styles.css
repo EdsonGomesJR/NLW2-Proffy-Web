@@ -52,6 +52,8 @@
   cursor: pointer;
   transition:  color 0.2s;
 }
+
+
 #page-teacher-form main fieldset legend button:hover{
   color: var(--color-primary-dark);
 }
@@ -110,8 +112,61 @@ margin-top: 3.2rem;
     max-width: 100vw;
   }
 
-  #page-teacher-form .page-header .header-content{
-    margin-bottom: 0;
+
+  #page-teacher-form .user-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+  }
+
+  #page-teacher-form  .user-info{
+    display: flex;
+    align-items: center;
+    
+  }
+  #page-teacher-form  .user-info p{
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--color-text-title);
+    
+  }
+
+  #page-teacher-form .user-data .input-block{
+ 
+    width: 225px;
+    margin-bottom: 20px;
+
+  
+  }
+
+
+  #page-teacher-form .user-data .input-block input{
+    font-size: 16px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  
+ 
+
+  }
+
+  #page-teacher-form .user-data .input-block input::placeholder{
+    color: #c1bccc;
+    font-family: Poppins;
+    font-size: 16px;
+    margin-left: 10px;
+    line-height: 26px;
+  
+  
+ 
+ 
+  }
+
+  #page-teacher-form .user-data img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
   }
 
   #page-teacher-form main fieldset{ 

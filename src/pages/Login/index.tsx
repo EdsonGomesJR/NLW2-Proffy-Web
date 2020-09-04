@@ -6,6 +6,7 @@ import purpleHeart from '../../assets/images/icons/purple-heart.svg';
 import { IconBaseProps } from 'react-icons';
 import LoginInput from '../../components/LoginInput';
 import { FiEye } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 
 
@@ -53,7 +54,7 @@ const Login: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
                 <span className="checkmark">  Lembrar-me </span>
         
               </label>
-             <a href="/">Esqueci minha senha</a>
+             <Link to="/password-forget">Esqueci minha senha</Link>
             </div>
             <button disabled={email.endsWith('.com')  ? false : true } type="submit">Entrar</button>
           </main>
@@ -62,7 +63,7 @@ const Login: React.FC<InputProps> = ({icon:Icon, hidden, ...rest}) => {
         
       <footer className="page-login-footer">
           <p>Não tem conta? {<br/>}
-          <a href="/">Cadastre-se</a>
+          <Link to="/signup">Cadastre-se</Link>
           </p>
           
           <p>É de graça!

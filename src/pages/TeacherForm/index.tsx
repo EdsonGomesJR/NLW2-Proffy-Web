@@ -3,12 +3,14 @@ import PageHeader from '../../components/PageHeader';
 import './styles.css';
 import Input from '../../components/Input';
 import warningIcon from '../../assets/images/icons/warning.svg';
+import rocketIcon from '../../assets/images/icons/rocket.svg';
 import TextArea from '../../components/TextArea';
 import Select from '../../components/Select';
 import api from '../../services/api';
 import {useHistory} from 'react-router-dom';
 
 function TeacherForm  ( )  {
+
 
   const history = useHistory();
 
@@ -68,32 +70,47 @@ function TeacherForm  ( )  {
     setScheduleItems(updatedScheduleItems);
     
   }
+  //(12) 98135-6877
+
+  function phoneFormat(n: string){
+    var x = n.replace(/\D/g, '').match(/(\d{0,2})(\d{0,1})(\d{0,4})(\d{0,4})/);
+    return (!x![2] ? x![1] : '(' + x![1] + ')' + 
+    ' ' + x![2] + ' ' +x![3] + ' ' +  (x![4] ? ' ' + x![4] : ''));
+  }
   return   ( 
+   
     <div id="page-teacher-form" className="container">
   <PageHeader title="Que incrível que você quer dar aulas!"
-  description="Uh lalalala ai lóvi iu beibe"/>
+  description="O primeiro passo é preencher esse formulário de inscrição"
+  pageTitle="Dar aulas"
+  image={rocketIcon}
+  imageText= {"Prepare-se!  \nvai ser o máximo!"}
+  />
 <form onSubmit={handleCreateClass}>
   <main>
     <fieldset>
       <legend>Seus dados</legend>
+<div className="user-data">
+  <div className="user-info">
+  <img src="https://scontent.fsjk1-1.fna.fbcdn.net/v/t1.0-1/p160x160/13615253_912784575513789_1088737632155292071_n.jpg?_nc_cat=105&_nc_sid=dbb9e7&_nc_ohc=z-Vusu1X-x8AX_TIgyF&_nc_ht=scontent.fsjk1-1.fna&_nc_tp=6&oh=e23c85804b303472180be7498c48e6f3&oe=5F505410" alt="userImg"/>
+  <p>Nome da Pessoa</p>
+  </div>
 
-      <Input 
-      name="name" 
-      label="Nome Completo"
-      value={name}
-      onChange={(e) => {setName(e.target.value)}}/>
-      <Input 
-        name="avatar" 
-        label="Avatar"
-        value={avatar}
-        onChange={(e) => {setAvatar(e.target.value)}}
-      />
-      <Input 
+  <Input id="phone"
         name="whatsapp" 
         label="WhatsApp"
-        value={whatsapp}
-        onChange={(e) => {setWhatsapp(e.target.value)}}
-      />
+        value={phoneFormat(whatsapp)}
+        type="tel"
+        placeholder="(    ) _  ____   ____"
+        pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}"
+        
+        onChange={(e) => 
+          setWhatsapp(e.target.value) }
+              />
+   
+      
+</div>
+   
       <TextArea 
         name="bio" 
         label="Biografia"
@@ -129,7 +146,6 @@ function TeacherForm  ( )  {
         label="Custo da sua aula por hora"
         value={cost}
       onChange={(e) => {setCost(e.target.value)}}
-        
         />
      
   

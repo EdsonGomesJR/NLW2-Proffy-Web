@@ -1,13 +1,12 @@
 import React, { InputHTMLAttributes, Component, useState } from 'react';
 import loginTheme from '../../assets/images/loginTheme.svg'; 
-import eyeIcon from '../../assets/images/icons/eye.svg';
+
 import './styles.css';
-import purpleHeart from '../../assets/images/icons/purple-heart.svg';
+
 import { IconBaseProps } from 'react-icons';
 import LoginInput from '../../components/LoginInput';
-import { FiMail, FiEye } from 'react-icons/fi';
-import TesteInput from '../../components/TesteInput';
-import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import {  FiEye } from 'react-icons/fi';
+
 import backIcon from '../../assets/images/icons/back.svg';
 import { Link } from 'react-router-dom';
 

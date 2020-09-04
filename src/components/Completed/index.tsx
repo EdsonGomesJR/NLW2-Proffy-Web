@@ -7,6 +7,7 @@ interface  CompletedProps {
   title: string;
   description: string;
   buttonText: string;
+  backTo?: string;
 }
 const Completed: React.FC<CompletedProps> = (props) => {
   return (
@@ -19,8 +20,8 @@ const Completed: React.FC<CompletedProps> = (props) => {
             </span>
 
        </div>
-       <Link  to="/login">
-       {props.buttonText}
+       <Link  to={"/" + props.backTo}>
+      {props.buttonText}
        </Link>
       </div>
     </div>

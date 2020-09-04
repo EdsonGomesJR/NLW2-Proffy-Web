@@ -7,6 +7,9 @@ import './styles.css';
 interface PageHeaderProps {
   title: string;
   description?: string;
+  pageTitle?: string;
+  image?: string;
+  imageText?: string;
 
 }
 const PageHeader: React.FC<PageHeaderProps> = (props) =>{
@@ -16,14 +19,34 @@ const PageHeader: React.FC<PageHeaderProps> = (props) =>{
       <Link to="/">
       <img src={backIcon} alt="voltar"/>
       </Link>
+      <p>{props.pageTitle}</p>
       <img src={logoImg} alt="logo"/>
     </div>
     <div className="header-content">
       <strong>{props.title}</strong>
-    {props.description && <p>{props.description}</p>}
+
+     <div className="header-sub-content">
+     {props.description &&  <p>{props.description}
+     
+     </p>}
+       
+    <div className="emoji-content">
+    {props.image && <img src={props.image} alt="emoji"/>}
+    {props.imageText && <p>{props.imageText}</p>}
+   </div>
+ </div>
+    
+
+  
+  
+ 
+    
+   
+  
     {props.children}
     </div>
-
+ 
+  
   </header>
 
       

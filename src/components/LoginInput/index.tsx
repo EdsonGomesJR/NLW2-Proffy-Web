@@ -1,13 +1,11 @@
 import React, {
   InputHTMLAttributes,
-  useEffect,
-  useCallback,
-  useRef,
+
   useState,
 } from 'react';
 import { IconBaseProps } from 'react-icons';
-import { FiEyeOff, FiMail } from 'react-icons/fi';
-import { useField } from '@unform/core';
+import { FiEyeOff } from 'react-icons/fi';
+
 // import  './styles.css';
 import {Container} from './styles';
 
@@ -15,12 +13,12 @@ import {Container} from './styles';
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   icon?: React.ComponentType<IconBaseProps>;
-  teste?: boolean;
+  inputFourBorders?: boolean;
 
 
 }
 
-const LoginInput: React.FC<InputProps> = ({ name,icon:Icon, teste,...rest }) => {
+const LoginInput: React.FC<InputProps> = ({ name,icon:Icon, inputFourBorders,...rest }) => {
   const [passwordShown, setPasswordShown] = useState(false);
 
   if(passwordShown){
@@ -37,7 +35,7 @@ const LoginInput: React.FC<InputProps> = ({ name,icon:Icon, teste,...rest }) => 
   return (
     //  <div className="input-block">
        
-<Container  isSecondary={teste ? true : false}>
+<Container  isFourBordered={inputFourBorders ? true : false}>
     <input
         
           type={passwordShown ? "text" && "e-mail" : "password"}

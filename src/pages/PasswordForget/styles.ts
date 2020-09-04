@@ -58,6 +58,7 @@ width: 100%;
 height: 100%;
 left: 10px;
 bottom: 2px;
+font-size: 18px;
 
 
 `;

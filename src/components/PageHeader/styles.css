@@ -7,11 +7,12 @@
 }
 
 .page-header .top-bar-container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--color-primary-dark);
   color: var(--color-text-in-primary);
   padding: 1.6rem;
 
@@ -51,29 +52,96 @@
   color: var(--color-text-in-primary);
   margin-top: 2.4rem;
 }
+
+.page-header .emoji-content{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -4rem;
+ 
+ 
+}
+.page-header .emoji-content img {
+  width: 3rem;
+  height: 3rem;
+}
+.page-header .emoji-content p {
+  margin-left: 10px;
+  width: 50%;
+  align-self: center;
+  margin-bottom: 16px;
+}
 @media(min-width: 700px){
   .page-header {
     height: 340px;
   }
 
   .page-header .top-bar-container{
-    max-width: 1100px;
+   width: 100%;
+   padding-left: 100px;
+   padding-right: 100px;
+   font: 500 16px Archivo;
+  
   }
+
 
   .page-header .header-content{
     flex: 1;
     max-width: 740px;
-    margin: 0 auto;
+    padding-left: 20px;
     padding-bottom: 48px;
     display: flex;
     flex-direction: column;
+    align-items: initial;
     justify-content: center;
-    align-items: flex-start;
+    margin-top: 40px;
+  }
+
+  .page-header .header-sub-content{
+    display: flex;
+    width: 100%;
+    margin-top: 34px;
+    justify-content: space-between;
+    margin-bottom: 66px;
+
+    
+  }
+
+  .page-header .header-sub-content p{
+    margin-top: 0;
+  }
+  .page-header .emoji-content{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 56px;
+   
+   
+  }
+  .page-header .emoji-content p {
+    margin-left: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 12px;
+    white-space: pre-line;
+
+    
+ 
+  
+    
   }
 
   .page-header .header-content strong {
     max-width: 350px;
+
   }
+  
+    
+  }
+ 
+
+
 
  
-}

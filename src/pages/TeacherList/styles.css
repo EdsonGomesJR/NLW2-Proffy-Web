@@ -27,6 +27,8 @@
   #page-teacher-list{
     max-width: 100%;
   }
+
+  
   #search-teachers{
 
     display:grid;
@@ -66,5 +68,43 @@
     padding: 32px 0;
     max-width: 740px;
     margin: 0 auto;
+  }
+
+  #page-teacher-list .page-header .header-content{
+    flex: 1;
+    max-width: 740px;
+    padding-left: 20px;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+
+  #page-teacher-list .page-header .header-content strong{
+    white-space: pre-line;
+  }
+
+  
+
+  #page-teacher-list .page-header .header-sub-content{
+    width: 300px;
+    justify-content:flex-end;
+    margin-top: 0;
+  
+
+    
+  }
+
+  #page-teacher-list .page-header .emoji-content{
+
+    width: 300px;
+    display: flex;
+    padding-left: 110px;
+    padding-top: 15px;
+   
+   
   }
 }
